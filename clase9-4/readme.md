@@ -1,0 +1,2 @@
+En la clase de hoy teniamos que hacer una página que mostrara el contenido que nosotros quisieramos de una Api publica.
+En mi caso elegi una api de personas random y elegi mostrar la imagen de las personas.

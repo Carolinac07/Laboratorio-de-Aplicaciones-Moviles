@@ -1,0 +1,80 @@
+body {
+  background-color: #f5e6d3;
+}
+
+.contenedor{
+  width: 500px;
+  margin: 30px auto;
+  background-color: #fffaf3;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.titulos {
+  color: black;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.agregarTareas{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+.barra{
+  background-color: #f3e4d3;
+  color: #5c4033;
+  padding: 4px 30px;
+  border-radius: 10px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.boton{
+  background-color: #d8b89c;
+  color: #4e342e;
+  border-radius: 5px;
+}
+.boton:hover{
+  background-color: #c69c7b;
+}
+
+.tarea{
+  background-color: #f8efe5;
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #5c4033;
+}
+.tarea p{
+  flex: 1;
+}
+
+
+.botones{
+  display: flex;
+  gap: 10px;
+}
+.tick{
+  background-color: olive;
+  border-radius: 7px;
+  padding: 5px 10px;
+}
+.tick:hover{
+  background-color: darkolivegreen;
+}
+
+.eliminar{
+  background-color: brown;
+  border-radius: 7px;
+  padding: 5px 10px;
+}
+.eliminar:hover{
+  background-color: maroon;
+}
+
+.completada{
+  text-decoration: line-through;
+}

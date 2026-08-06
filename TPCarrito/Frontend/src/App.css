@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: black;
+}
+.contenedor {
+    width: 90%;
+    margin: auto;
+}
+h1 {
+    text-align: center;
+    color: black;
+}
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.producto {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+}
+.producto img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+.producto h2 {
+    font-size: 18px;
+    color: black;
+}
+.producto p {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    opacity: 0.8;
+}
+h2 {
+    color: black;
+}

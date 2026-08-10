@@ -12,6 +12,6 @@ function Producto({ producto, agregarAlCarrito }) {
                 Agregar al carrito
             </button>
         </div>
-    );
+    )
 }
-export default Producto;
+export default Producto

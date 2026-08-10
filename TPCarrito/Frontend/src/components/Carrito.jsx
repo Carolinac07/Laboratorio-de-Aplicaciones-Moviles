@@ -1,8 +1,8 @@
 function Carrito({ carrito, vaciarCarrito }) {
-    let total = 0;
+    let total = 0
     carrito.forEach((producto) => {
-        total = total + (producto.price * producto.cantidad);
-    });
+        total = total + (producto.price * producto.cantidad)
+    })
 
     return (
         <div className="carrito">
@@ -29,7 +29,7 @@ function Carrito({ carrito, vaciarCarrito }) {
                 Vaciar carrito
             </button>
         </div>
-    );
+    )
 }
 
 export default Carrito;

@@ -1,23 +1,23 @@
-import { useEffect, useState } from "react";
-import Producto from "./components/Producto";
-import Carrito from "./components/Carrito";
-import "./App.css";
+import { useEffect, useState } from "react"
+import Producto from "./components/Producto"
+import Carrito from "./components/Carrito"
+import "./App.css"
 
 function App() {
 
-  const [productos, setProductos] = useState([]);
-  const [carrito, setCarrito] = useState([]);
+  const [productos, setProductos] = useState([])
+  const [carrito, setCarrito] = useState([])
 
   useEffect(() => {
     fetch("https://dummyjson.com/products")
       .then((respuesta) => respuesta.json())
       .then((datos) => {
-        setProductos(datos.products);
+        setProductos(datos.products)
       })
       .catch((error) => {
-        console.log(error);
-      });
-  }, []);
+        console.log(error)
+      })
+  }, [])
 
   function agregarAlCarrito(producto) {
     const productoExiste = carrito.find(
@@ -29,11 +29,11 @@ function App() {
                 return {
                     ...item,
                     cantidad: item.cantidad + 1
-                };
+                }
             }
-            return item;
-        });
-        setCarrito(nuevoCarrito);
+            return item
+        })
+        setCarrito(nuevoCarrito)
     } else {
         setCarrito([
             ...carrito,
@@ -41,11 +41,11 @@ function App() {
                 ...producto,
                 cantidad: 1
             }
-        ]);
+        ])
     }
 }
     function vaciarCarrito() {
-      setCarrito([]);
+      setCarrito([])
     }
   return (
     <div className="contenedor">
@@ -68,6 +68,6 @@ function App() {
         vaciarCarrito={vaciarCarrito}
       />
     </div>
-  );
+  )
 }
-export default App;
+export default App

@@ -1,16 +1,125 @@
-# React + Vite
+# Carrito Full Stack
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## Descripción
 
-Currently, two official plugins are available:
+Este proyecto consiste en una página web de una tienda online con un carrito de compras.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+El usuario puede ver diferentes productos, agregarlos al carrito, eliminarlos y ver el total de la compra. Al momento de comprar, el sistema se conecta con un Backend y crea un pago de prueba utilizando Mercado Pago.
 
-## React Compiler
+## Tecnologías utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* React
+* Vite
+* JavaScript
+* CSS
+* Node.js
+* Express
+* Mercado Pago Developer
 
-## Expanding the Oxlint configuration
+## Funcionamiento
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+El proyecto está dividido en dos partes:
+
+### Frontend
+
+El Frontend está realizado con React.
+
+Desde esta parte se pueden:
+
+* Ver los productos.
+* Ver imágenes y precios.
+* Agregar productos al carrito.
+* Eliminar productos.
+* Ver el total.
+* Realizar la compra.
+
+### Backend
+
+El Backend está realizado con Node.js y Express.
+
+Su función principal es recibir el total de la compra y comunicarse con Mercado Pago para crear el pago.
+
+## Mercado Pago
+
+Se utilizó Mercado Pago Developer para realizar una integración de prueba.
+
+Cuando el usuario toca el botón **Comprar**, el Frontend envía el total al Backend.
+
+El Backend crea la preferencia de pago y devuelve un enlace.
+
+Finalmente, el usuario es enviado al Checkout de Mercado Pago para realizar la prueba del pago.
+
+## Estructura del proyecto
+
+```text
+CarritoFullStack/
+│
+├── Frontend/
+│   ├── src/
+│   │   ├── App.jsx
+│   │   ├── App.css
+│   │   └── main.jsx
+│   ├── package.json
+│   └── vite.config.js
+│
+└── Backend/
+    ├── server.js
+    ├── package.json
+    └── .env
+```
+
+## Instalación
+
+### Frontend
+
+Entrar a la carpeta Frontend y ejecutar:
+
+```bash
+npm install
+```
+
+Después:
+
+```bash
+npm run dev
+```
+
+### Backend
+
+Entrar a la carpeta Backend y ejecutar:
+
+```bash
+npm install
+```
+
+Después:
+
+```bash
+node server.js
+```
+
+El Backend funciona en:
+
+```text
+http://localhost:3000
+```
+
+El Frontend funciona normalmente en:
+
+```text
+http://localhost:5173
+```
+
+## Importante
+
+El archivo `.env` contiene el Access Token de Mercado Pago y no debe subirse a GitHub.
+
+También se recomienda no subir la carpeta `node_modules`, ya que puede volver a generarse ejecutando:
+
+```bash
+npm install
+```
+
+## Objetivo
+
+El objetivo del proyecto es desarrollar un carrito de compras Full Stack y comprender cómo se comunican el Frontend y el Backend, además de realizar una integración de prueba con una plataforma de pagos.

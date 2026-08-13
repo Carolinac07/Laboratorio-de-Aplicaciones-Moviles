@@ -8,12 +8,12 @@ function App() {
     { id: 3, nombre: "Auriculares", precio: 20 },
     {id: 4, nombre: "Celular", precio: 30}
   ]
-  const [carrito, setCarrito] = useState([]);
+  const [carrito, setCarrito] = useState([])
   function agregarAlCarrito(producto) {
-    setCarrito([...carrito, producto]);
+    setCarrito([...carrito, producto])
   }
   function eliminarDelCarrito(id) {
-    setCarrito(carrito.filter(producto => producto.id !== id));
+    setCarrito(carrito.filter(producto => producto.id !== id))
   }
   const total = carrito.reduce(
     (suma, producto) => suma + producto.precio,
